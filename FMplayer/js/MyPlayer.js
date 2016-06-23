@@ -89,7 +89,7 @@ MyPlayer.bindEvns = function () {
 
     },function(e){
         e.stopImmediatePropagation();
-        MyPlayer.$infoIcon.animate({right:-150})
+        MyPlayer.$infoIcon.animate({right:-160})
     });
 
 
