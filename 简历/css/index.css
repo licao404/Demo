@@ -1,0 +1,283 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: "微软雅黑";
+}
+html,body {
+	width:100%;
+	height:100%;
+}
+body {
+	background: #777 url('../img/banner.jpg');
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	border: none;
+	padding:5px 10px;
+	text-decoration: none;
+	border: none;
+	background: #1E347B;
+	color: #eee;
+}
+.btn:hover {
+	background: #152851;
+}
+.hr {
+	width:100%;
+	height:2px;
+	margin:20px auto;
+}
+.wraper {
+	max-width: 1080px;
+	margin:  0 auto;
+}
+ul {
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+/*------------------*/
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+header ul a:hover {
+	color: #38B9A8;
+}
+
+nav {
+	background: transparent;
+	padding:10px 20px;
+	
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+
+	transition: background .8s;
+}
+nav a {
+	text-decoration: none;
+	display: block;
+	color:#fff;
+}
+nav>#logo {
+    float: left;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+}
+nav>ul {
+    float: right;
+    list-style: none;
+	line-height: 30px;
+}
+nav>ul>li {
+	display: inline-block;
+	padding: 0 10px;
+    border-radius: 5px;
+}
+nav>ul>li.active {
+	background: #275D5D;
+}
+/*----------*/
+#banner {
+	height:100%;
+	width:100%;
+	color:#fff;
+	background: rgba(0,0,0,.4);
+	
+	position: relative;
+}
+#banner>.inner {
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto;
+
+	position: relative;
+	top:30%;
+}
+#banner>.inner>h1 {
+	margin-top: 0;
+	
+	padding:12px;
+	border-top: 2px solid rgba(255,255,255,.6);
+	border-bottom: 2px solid rgba(255,255,255,.6);
+}
+#banner>.inner>p {
+	margin-top: 30px;
+}
+
+#banner>.inner>.btn {
+	padding: 10px 30px;
+	margin-top: 50px;
+}
+
+
+
+#banner>.more {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    margin-left: -15px;
+	text-align: center;
+}
+/*---------------*/
+
+.green-section,.blue-section,.yellow-section {
+	padding:100px 0 ;
+	text-align: center;
+	color: #fff;
+}
+.green-section {
+	background: #38B9A8;
+}
+
+.green-section h2,.blue-section h2 {
+	margin-top: 0;
+}
+.green-section .hr {
+	background: #2F9E90;
+	width:60%;
+}
+
+/*---------------------*/
+.blue-section {
+	background: #2D5A5A;
+}
+
+.blue-section .hr {
+	background: #56ABAB;
+	width:60%;
+}
+/*-------------*/
+.yellow-section {
+	background: #0B4754;
+}
+.yellow-section .hr {
+	background: #2F9E90;
+	width:60%;
+}
+/*-----demos---------*/
+.demo-mask {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: .3;
+	filter: alpha(opacity=60);
+	background-color: #a8acaf;
+	transition: opacity .15s;
+}
+
+.demoCt {
+	background: #777;
+	width: 1200px;
+	height: 400px;
+	margin: 0 auto;
+	margin-top: 60px;
+
+}
+.demoCt>.demoItem {
+	position: relative;
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+.demoItem>a,.demoItem img {
+	display: block;
+	width: inherit;
+	height:inherit;
+}
+
+.demoItem>.itemchild {
+	width: inherit;
+	height:inherit;
+}
+.itemChild>.demoItem {
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+.demoCt>.demoItem>.demoInfo {
+	width: 300px;
+}
+.itemChild>.demoItem>.demoInfo {
+	width: 200px;
+}
+.demoInfo {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 100%;
+
+	text-align: left;
+	z-index: 1;
+	background: #2D5A5A;
+
+	display: none;
+}
+.demoInfo.left-200 {
+	left:-200%;
+}
+.demoInfo.left-150 {
+	left:-150%;
+}
+.demoInfo>h3,.demoInfo>p {
+	margin:0;
+}
+.demoInfo>h3 {
+	font-size: 20px;
+}
+.demoInfo>p {
+	font-size: 12px;
+
+}
+.demoCt>.demoItem>.demoInfo {
+	padding:20px;
+}
+.demoCt>.demoItem>.demoInfo>.infoContent {
+	padding-top:25px;
+}
+.itemChild>.demoItem>.demoInfo {
+	padding:10px;
+}
+.itemChild>.demoItem>.demoInfo>.infoContent {
+	padding-top:20px;
+}
+/*------footer-------*/
+
+footer {
+	padding:50px 0 ;
+	text-align: center;
+	color:white;
+}
+.copy {
+
+}
+.copy>li {
+	display: inline-block;
+	padding-right:10px;
+}
+
+.copy>li:first-child {
+	padding-right:400px;
+	color: #ccc;
+}
+
+
+
+
+
+
+
+
