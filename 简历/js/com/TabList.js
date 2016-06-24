@@ -43,7 +43,7 @@ define(['jquery'],function(){
                 '<p>对前端工程化、模块化有一定认识，能使用 RequireJS 实现模块化开发，能使用 NPM、Gulp 打造基本的自动化流程</p>' +
                 '<p>对前端性能优化有相关经验</p>',
                 css = "<p>掌握浮动、定位、盒模型、BFC 等CSS核心概念，掌握常见布局方式，对CSS 兼容有一定经验，能熟练开发符合W3C规范的常见页面。</p>",
-                html =  "<p>掌握HTML标签使用方法，对代码可读性、规范性、语义化有一定认识。</p>";
+                html =  "<p>掌握HTML常用标签使用方法，对代码可读性、规范性、语义化有一定认识。</p>";
             var temp = "";
             temp += '<div class="tab-list clearfix">'
                         + '<div class="listContent">'

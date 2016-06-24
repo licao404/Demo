@@ -35,7 +35,7 @@ define(['jquery'],function($){
                 fontSize: 40,
                 color: "#00BCD4",
                 cursor: "pointer",
-                display: "block",
+                display: "none",
                 background: "#1E347B",
                 padding:'5px 5px'
 
