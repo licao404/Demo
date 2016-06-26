@@ -23,7 +23,7 @@ define(['jquery'],function($){
         }
         function rander(){
             var temp = "";
-            temp += '<div id="goTop" class="iconfont">&#xe61e;';
+            temp += '<div id="goTop">∧';
             temp += '</div>';
 
             $node = $(temp);
@@ -37,7 +37,7 @@ define(['jquery'],function($){
                 cursor: "pointer",
                 display: "none",
                 background: "#1E347B",
-                padding:'5px 5px'
+                padding:'3px 5px'
 
             });
 

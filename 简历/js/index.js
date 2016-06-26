@@ -5,10 +5,11 @@ requirejs.config({
 	}
 });
 
-requirejs(['jquery','CarouselCSS3','GoTop', 'TabList'],function ($,Carousel,GoTop,TabList) {
+requirejs(['jquery','CarouselCSS3','GoTop', 'TabList','drag'],function ($,Carousel,GoTop,TabList,Drag) {
 
 	new TabList($('.green-section>.wraper'));
-
+	
+	Drag.init($('.ball'));
 	Carousel.init($('.J_Poster'));
 	GoTop();
 
@@ -30,52 +31,50 @@ requirejs(['jquery','CarouselCSS3','GoTop', 'TabList'],function ($,Carousel,GoTo
 			if (isShow($('#banner'))){
 				$nav.children('ul').children().removeClass('active');
 				$nav.css('background',"transparent");
-
 			}
-			if (isShow($('.green-section'))){
+			if (isShow($('#introduce'))){
 				$nav.children('ul').children().removeClass('active').eq(1).addClass('active');
-				$nav.css('background',"#0B4754");
+				$nav.css('background',"#082646");
 			}
-			if (isShow($('.blue-section'))){
+			if (isShow($('#base'))){
 				$nav.children('ul').children().removeClass('active').eq(2).addClass('active');
 			}
-			if (isShow($('.yellow-section'))){
+			if (isShow($('#works'))){
 				$nav.children('ul').children().removeClass('active').eq(3).addClass('active');
 			}
-		},100);
+
+			//myLabel   -----------------
+
+		},100)
+
 
 	});
 	function isShow($node) {
 		return $win.height()/2 + $win.scrollTop() > $node.offset().top ;
 	}
-	
-	//demos   -----------------
 
-	var $demoCt = $('.demoCt');
-	var demoClock ;
 
-	$demoCt.on('mouseenter','.demoItem',function (event) {
-		event.stopPropagation() ;  //停止冒泡
-		var _this = $(this);
-		_this.find('.demo-mask').css({
-			'opacity': 0
+	$('.blackboard').on('mouseenter',function () {
+		$(this).children().each(function (index,elem) {
+            var target =$(this);
+            var left = 5;
+
+			target.css('background',getRandomColor());
+
+            for (var i = 0 ;i < 2;i++){
+                target.animate({
+                    'margin-left':left
+                });
+                left = 0 - left;
+            }
+
 		});
-		demoClock = setTimeout(function () {
-			_this.find('.demoInfo').show();
-		},500)
+        console.log(labelClock)
+	});
 
-	}).on('mouseleave','.demoItem',function (event) {
-		var _this = $(this);
-		_this.find('.demo-mask').css({
-			'opacity': 0.3
-		});
-
-		if (demoClock) {
-			clearTimeout(demoClock);
-			_this.find('.demoInfo').hide();
-		}
-
-	})
+	function getRandomColor(){
+		return '#'+(Math.random()*0xffffff<<0).toString(16);
+	}
 
 });
 
