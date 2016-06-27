@@ -60,16 +60,15 @@ requirejs(['jquery','CarouselCSS3','GoTop', 'TabList','drag'],function ($,Carous
             var left = 5;
 
 			target.css('background',getRandomColor());
-
-            for (var i = 0 ;i < 2;i++){
-                target.animate({
-                    'margin-left':left
-                });
-                left = 0 - left;
-            }
+				for (var i = 0 ;i < 2;i++){
+					target.animate({
+						'margin-left':left
+					});
+					left = 0 - left;
+				}
 
 		});
-        console.log(labelClock)
+        // console.log(labelClock)
 	});
 
 	function getRandomColor(){
