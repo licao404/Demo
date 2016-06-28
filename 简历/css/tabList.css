@@ -1,7 +1,7 @@
 .tab-list {
     margin-top: 60px;
     margin-left: 100px;
-    background-color: #2A756B;
+    background-color: #5597ac;
 }
 .listHead,.listContent {
     float:left;
@@ -9,8 +9,8 @@
 .listHead>.tab-head {
     width: 100px;
     height: 100px;
-    background: #458E8E;
-    border:1px solid #376B6B;
+    background: #60abc0;
+    border:1px solid #5597ac;
 }
 .listHead>.tab-head.active {
     border-right:none;
@@ -23,7 +23,7 @@
     color:#ccc;
 }
 .listHead>.tab-head.active>a {
-    background: #2A756B;
+    background: #5597ac;
     color: #ffffff;
     text-decoration: none;
     font-size: 40px;

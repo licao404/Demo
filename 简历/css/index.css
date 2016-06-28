@@ -55,13 +55,16 @@ header ul a:hover {
 
 nav {
 	background: transparent;
-	padding:10px 20px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:5px;
+	padding-bottom:5px;
 	
 	position: fixed;
 	width: 100%;
 	z-index: 999;
 
-	transition: background .8s;
+	transition: all .5s;
 }
 nav a {
 	text-decoration: none;
@@ -86,7 +89,7 @@ nav>ul>li {
     border-radius: 5px;
 }
 nav>ul>li.active {
-	background: #275D5D;
+	background: #5A8ED2;
 }
 /*----------*/
 #banner {
@@ -138,38 +141,115 @@ nav>ul>li.active {
 	color: #fff;
 }
 .green-section {
-	background: #38B9A8;
+	background: #14a9cc;
 }
 
 .green-section h2,.blue-section h2 {
 	margin-top: 0;
 }
 .green-section .hr {
-	background: #2F9E90;
+	background: #0576DF;
 	width:60%;
 }
 
+
+/*-----------interduce-----*/
+.box {
+	width: 200px;
+	height:80px;
+	line-height: 80px;
+	font-weight: 700;
+	float: left;
+}
+
+.arrow {
+	border-left: 30px solid transparent;
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+	float:left;
+}
+
+.box-main {
+	position: relative;
+	height:80px;
+	margin-top: 10px;
+}
+
+.pos-one {
+	position: absolute;
+	z-index: 5;
+}
+.pos-two {
+	position: absolute;
+	z-index: 4;
+	left:10px;
+}
+.pos-three {
+	position: absolute;
+	z-index: 3;
+	left:20px;
+}
+.pos-four {
+	position: absolute;
+	z-index: 2;
+	left:30px;
+}
+.pos-five {
+	position: absolute;
+	z-index: 1;
+	left:40px;
+}
+.pos-one>.box {
+	background-color: #ffff00;
+}
+.pos-one>.arrow {
+	border-left-color: #ffff00;
+}
+.pos-two>.box {
+	background-color: #6dd1d1;
+}
+.pos-two>.arrow {
+	border-left-color: #6dd1d1;
+}
+.pos-three>.box {
+	background-color: #1e347b;
+}
+.pos-three>.arrow {
+	border-left-color: #1e347b;
+}
+.pos-four>.box {
+	background-color: #7576f4;
+}
+.pos-four>.arrow {
+	border-left-color: #7576f4;
+}
+.pos-five>.box {
+	background-color: #c46275;
+}
+.pos-five>.arrow {
+	border-left-color: #c46275;
+}
 /*---------------------*/
 .blue-section {
-	background: #2D5A5A;
+	background: #7576f4;
 }
 
 .blue-section .hr {
-	background: #56ABAB;
+	background: #6dd1d1;
 	width:60%;
 }
 /*-------------*/
 .yellow-section {
-	background: #0B4754;
+	background: #0F4F92;
 }
 .yellow-section .hr {
-	background: #2F9E90;
+	background: #1668BD;
 	width:60%;
 }
 
 
 .blackboard {
-	padding:110px;
+	padding:110px 0;
 
 	-moz-user-select:none;/*火狐*/
 	-webkit-user-select:none;/*webkit浏览器*/
