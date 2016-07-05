@@ -61,10 +61,10 @@
             background-color: #EDEDED;
         }
 
-        .skill-list,.project-list,.works-list,.blog-list,.github-list {
+        .skill-list,.project-list,.works-list,.my-info {
             display: none;
         }
-        .skill-list.active,.project-list.active,.works-list.active,.blog-list.active,.github-list.active {
+        .skill-list.active,.project-list.active,.works-list.active,.my-info.active {
             display: block;
         }
         /*------------header-------------*/
@@ -128,10 +128,24 @@
         }
 
         .side-footer {
+            text-align: left;
             padding:30px;
-            text-align: center;
             background-color: rgba(0,0,0,.2);
-
+        }
+        .side-more {
+            padding: 10px 0;
+            border-bottom: 1px solid;
+            margin-bottom: 20px;
+        }
+        .side-more-item {
+            padding:5px 0;
+        }
+        .side-more-item a {
+            color: #000;
+        }
+        .side-more-item a:hover {
+            color: #000;
+            text-decoration: underline;
         }
         /*------------content--------------*/
         .public-header {
@@ -154,8 +168,6 @@
             font-size: 1.1rem;
             color:#08B4DA;
         }
-
-
         .skill-item {
             border: 1px solid;
             margin-bottom: 20px;
@@ -210,12 +222,18 @@
         .skill-footer {
             margin-top: 40px;
         }
+
         /*------------project--------------*/
         .works-content {
             padding-top:10px;
         }
         .works-item {
             padding:20px 0;
+        }
+        .works-item-txt {
+            list-style:square inside;
+            line-height: 30px;
+            margin-left:20px;
         }
         .works-item-subhead {
             margin-bottom: 10px;
@@ -232,11 +250,20 @@
         .works-img {
             display: block;
             float:right;
-            width: 100px;
-            height:100px;
+            width: 180px;
+            height:160px;
             padding:5px;
             border:1px solid #ccc;
             border-radius: 3px;
+            transition: all 0.3s;
+        }
+        .works-img img {
+            display: block;
+            width: 100%;
+            height:100%;
+        }
+        .works-img:hover {
+            box-shadow: 3px 2px 5px #777;
         }
 
     </style>
@@ -265,7 +292,7 @@
                             <p>了解基本的 <span class="public-txt-key">Node.js</span> 操作，能搭建后端环境实现数据 mock 与接口测试</p>
                             <p>熟悉基本的前端 <span class="public-txt-key">兼容性</span> 处理、 <span class="public-txt-key">性能优化</span> 知识，并加以应用</p>
                             <p>能熟练使用 <span class="public-txt-key">jQuery</span> 进行开发，实现常见的页面效果</p>
-                            <p>能熟练应用 <span class="public-txt-key">Bootstrap</span> 快速搭建页面</p>
+                            <p>了解 <span class="public-txt-key">Bootstrap</span></p>
                         </div>
                         <div class="skill-item-head pos-right">进 阶</div>
                     </li>
@@ -286,13 +313,6 @@
                     </canvas>
                 </div>
             </div>
-            <!--<div class="project-list active">-->
-                <!--<div class="public-header">-->
-                    <!--<i class="public-line"></i>-->
-                    <!--<span class="public-title">项目经历</span>-->
-                    <!--<i class="public-line"></i>-->
-                <!--</div>-->
-            <!--</div>-->
             <div class="works-list">
                 <div class="public-header">
                     <i class="public-line"></i>
@@ -310,11 +330,21 @@
                         <h3 class="works-item-title">FMPlayer</h3>
                         <p class="works-item-subhead"> 饥人谷前端毕业设计</p>
 
-                        <img class="works-img" src="image/2009.jpg" alt="">
+                        <a class="works-img"  href="http://peifan325.applinzi.com/FMplayer/" target="_blank">
+                            <img src="image/1.jpg" alt="">
+                        </a>
 
-                        <p class="works-item-txt">采用了HTML5的 <span class="public-txt-key">Audio</span> 标签,做音乐控制器</p>
-                        <p><span class="public-txt-key">jQuery Ajax</span> 获取音乐及歌词文件，歌词转换为<span class="public-txt-key">JSON</span>对象以方便输出。</p>
-                        <p>另外，使用了 <span class="public-txt-key">拖动模块、jQuery animate</span> 动画，使界面更友好。</p>
+                        <ul class="works-item-txt">
+                            <li>
+                                <p>采用了HTML5的 <span class="public-txt-key">Audio</span> 标签,做音乐控制器</p>
+                            </li>
+                            <li>
+                                <p><span class="public-txt-key">jQuery Ajax</span> 获取音乐及歌词文件，歌词转换为<span class="public-txt-key">JSON</span>对象以方便输出。</p>
+                            </li>
+                            <li>
+                                <p>使用了 <span class="public-txt-key">拖动模块、jQuery animate</span> 动画，使界面更友好。</p>
+                            </li>
+                        </ul>
 
                     </li>
                     <li class="works-item clearfix">
@@ -326,10 +356,18 @@
                         <h3 class="works-item-title">仿Bootstrap页面</h3>
                         <p class="works-item-subhead"> html、css 布局</p>
 
-                        <img class="works-img" src="image/2011.jpg" alt="">
+                        <a class="works-img"  href="http://peifan325.applinzi.com/BootStrapp/" target="_blank">
+                            <img src="image/2011.jpg" alt="">
+                        </a>
 
-                        <p>封装了 <span class="public-txt-key">曝光加载、轮播、瀑布流、加载更多</span> 等模块。</p>
-                        <p>使用requirejs管理模块依赖关系，r.js压缩合并js文件。</p>
+                        <ul class="works-item-txt">
+                            <li>
+                                <p>封装了 <span class="public-txt-key">曝光加载、轮播、瀑布流、加载更多</span> 等模块。</p>
+                            </li>
+                            <li>
+                                <p>使用requirejs管理模块依赖关系，r.js压缩合并js文件。</p>
+                            </li>
+                        </ul>
                     </li>
 
                     <li class="works-item clearfix">
@@ -341,14 +379,16 @@
                         <h3 class="works-item-title">瀑布流布局信息展示</h3>
                         <p class="works-item-subhead"> 瀑布流</p>
 
-                        <img class="works-img" src="image/2012.jpg" alt="">
+                        <a class="works-img"  href="http://peifan325.applinzi.com/Weaterfall/" target="_blank">
+                            <img src="image/2012.jpg" alt="">
+                        </a>
 
-                        <p>瀑布流：元素定宽，不定高，计算出每行可以放几列元素，父元素宽度 / 元素宽度 = 列 。 </p>
-                        <p>初始化每列高度为 0</p>
-                        <p>循环设置元素的left top 属性</p>
-                        <p>每次首先查找高度最低的列，获取下标index 和 高度 minHeight。</p>
-                        <p>left = 元素宽度 * index  top = minHeight</p>
-                        <p>列[index] = minHeight + 插入元素的真实高度</p>
+                        <ul class="works-item-txt">
+                            <li>
+                                <p>瀑布流：对宽度固定，高度不定的元素进行布局的一种方式。</p>
+                            </li>
+
+                        </ul>
                     </li>
 
                     <li class="works-item clearfix">
@@ -360,27 +400,29 @@
                         <h3 class="works-item-title">几种轮播模块的封装</h3>
                         <p class="works-item-subhead"> 轮播模块封装</p>
 
-                        <img class="works-img" src="image/2014.jpg" alt="">
+                        <a class="works-img"  href="http://peifan325.applinzi.com/Carousel-Modules/Css3.html" target="_blank">
+                            <img src="image/2014.jpg" alt="">
+                        </a>
 
-                        <p>封装了 <span class="public-txt-key">淡入淡出、无缝滚动、全屏轮播、CSS3轮播</span> 等模块。</p>
+                        <ul class="works-item-txt">
+                            <li><p>
+                                封装了 <span class="public-txt-key">淡入淡出、无缝滚动、全屏轮播、CSS3轮播</span> 等模块。
+                            </p></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
-            <div class="blog-list">
+            <div class="my-info">
                 <div class="public-header">
                     <i class="public-line"></i>
-                    <span class="public-title">技术博客</span>
+                    <span class="public-title">个人信息</span>
                     <i class="public-line"></i>
                 </div>
+                <dl>
+                    <dt>sfds</dt>
+                    <dd>dfsdf</dd>
+                </dl>
             </div>
-            <div class="github-list">
-                <div class="public-header">
-                    <i class="public-line"></i>
-                    <span class="public-title">GitHub</span>
-                    <i class="public-line"></i>
-                </div>
-            </div>
-
         </div>
 
         <div class="sidebar">
@@ -393,11 +435,12 @@
                 <li class="side-menu-item menu active"><a href="#" class="menu-link"><i class="icon-opac-0 iconfont icon-dengpao icon-2x"></i> 技能清单</a></li>
                 <!--<li class="side-menu-item"><a href="#" class="menu-link"><i class="icon-opac-0 iconfont icon-yingyonglei icon-2x"></i> 项目经历</a></li>-->
                 <li class="side-menu-item menu"><a href="#" class="menu-link"><i class="icon-opac-0 iconfont icon-liebiao icon-2x"></i> 作品列表</a></li>
-                <li class="side-menu-item link"><a href="http://leanote.com/blog/56f884fbab644122de0018f4" target="_blank" class="menu-link"><i class="icon-opac-0 iconfont icon-blog icon-2x"></i> 技术博客</a></li>
-                <li class="side-menu-item link"><a href="https://github.com/peifan325/Demo" target="_blank" class="menu-link"><i class="icon-opac-0 iconfont icon-github icon-2x"></i> 项目源码</a></li>
+                <li class="side-menu-item menu"><a href="#" class="menu-link"><i class="icon-opac-0 iconfont icon-yingyonglei icon-2x"></i> 个人信息</a></li>
             </ul>
             <div class="side-footer">
-                更多信息
+                <p class="side-more"><i class="iconfont icon-liebiao"></i> 更多信息</p>
+                <p class="side-more-item"><i class="iconfont icon-github"></i> <a href="https://github.com/peifan325/Demo" target="_blank">源代码</a></p>
+                <p class="side-more-item"><i class="iconfont icon-blog"></i> <a href="http://leanote.com/blog/56f884fbab644122de0018f4" target="_blank">技术博客</a></p>
             </div>
         </div>
     </div>
@@ -413,7 +456,7 @@
 
         $('.side-menu').on('click','.side-menu-item',function () {
 
-
+            event.preventDefault();
             var target = $(this);
             var index = target.index();
             //激活内容项
@@ -433,8 +476,8 @@
 
             cricle(95,95,60,0.9,0.75,"#08b4da","HTML");
             cricle(95+190,95,60,0.95,0.75,"#08b4da","CSS");
-            cricle(95+190*2,95,60,1,0.75,"#08b4da","JS");
-            cricle(95+190*3,95,60,0.1,0.75,"#08b4da","jQuery");
+            cricle(95+190*2,95,60,1,0.75,"#08b4da","jQuery");
+            cricle(95+190*3,95,60,0.1,0.75,"#08b4da","JS");
 
         }
         function cricle(x,y,r,start,end,color,txt) {

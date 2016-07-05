@@ -14,7 +14,7 @@ li {
     position:relative;
     width:800px;
     height:270px;
-
+    margin:100px auto;
 }
 .poster-main .poster-list {
     width:800px;
