@@ -250,7 +250,7 @@
         .works-img {
             display: block;
             float:right;
-            width: 180px;
+            width: 210px;
             height:160px;
             padding:5px;
             border:1px solid #ccc;
@@ -264,6 +264,41 @@
         }
         .works-img:hover {
             box-shadow: 3px 2px 5px #777;
+        }
+        .info-content {
+            perspective:900px;
+        }
+        .alert:hover {
+            transform:rotateY(180deg) ;
+        }
+        .alert {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-top: 20px;
+            font-size: 20px;
+            transition: transform .5s;
+        }
+        .alert-danger {
+            color: #fff;
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+        .alert-info {
+            color: #fff;
+            background-color: #5bc0de;
+            border-color: #46b8da;
+        }
+        .alert-success {
+            color: #fff;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+        }
+        .alert-warning {
+            color: #fff;
+            background-color: #f0ad4e;
+            border-color: #eea236;
         }
 
     </style>
@@ -292,7 +327,7 @@
                             <p>了解基本的 <span class="public-txt-key">Node.js</span> 操作，能搭建后端环境实现数据 mock 与接口测试</p>
                             <p>熟悉基本的前端 <span class="public-txt-key">兼容性</span> 处理、 <span class="public-txt-key">性能优化</span> 知识，并加以应用</p>
                             <p>能熟练使用 <span class="public-txt-key">jQuery</span> 进行开发，实现常见的页面效果</p>
-                            <p>了解 <span class="public-txt-key">Bootstrap</span></p>
+                            <p>熟练使用 <span class="public-txt-key">Bootstrap</span> 快速搭建页面</p>
                         </div>
                         <div class="skill-item-head pos-right">进 阶</div>
                     </li>
@@ -350,6 +385,30 @@
                     <li class="works-item clearfix">
                         <div class="works-item-btn">
                             <div class="public-line"></div>
+                            <a class="public-btn" href="https://github.com/peifan325/Demo/tree/master/BootStrap" target="_blank">代码</a>
+                            <a class="public-btn" href="http://peifan325.applinzi.com/BootStrap/" target="_blank">演示</a>
+                        </div>
+
+                        <h3 class="works-item-title">现代浏览器博物馆</h3>
+                        <p class="works-item-subhead"> 基于Bootstrap的页面搭建</p>
+
+                        <a class="works-img"  href="http://peifan325.applinzi.com/BootStrap/" target="_blank">
+                            <img src="image/2.jpg" alt="">
+                        </a>
+
+                        <ul class="works-item-txt">
+                            <li>
+                                <p>采用 <span class="public-txt-key">Bootstrap</span> 框架</p>
+                            </li>
+                            <li>
+                                <p>实现 导航菜单 轮播 tab标签页 下拉菜单等网页常见效果</p>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="works-item clearfix">
+                        <div class="works-item-btn">
+                            <div class="public-line"></div>
                             <a class="public-btn" href="https://github.com/peifan325/Demo/tree/master/BootStrapp" target="_blank">代码</a>
                             <a class="public-btn" href="http://peifan325.applinzi.com/BootStrapp/" target="_blank">演示</a>
                         </div>
@@ -380,7 +439,7 @@
                         <p class="works-item-subhead"> 瀑布流</p>
 
                         <a class="works-img"  href="http://peifan325.applinzi.com/Weaterfall/" target="_blank">
-                            <img src="image/2012.jpg" alt="">
+                            <img src="image/3.jpg" alt="">
                         </a>
 
                         <ul class="works-item-txt">
@@ -406,7 +465,12 @@
 
                         <ul class="works-item-txt">
                             <li><p>
-                                封装了 <span class="public-txt-key">淡入淡出、无缝滚动、全屏轮播、CSS3轮播</span> 等模块。
+                                封装了
+                                <a href="http://peifan325.applinzi.com/Carousel-Modules/threefadeIn.html"><span class="public-txt-key">淡入淡出</span></a>、
+                                <a href="http://peifan325.applinzi.com/Carousel-Modules/Roll.html"><span class="public-txt-key">无缝滚动</span></a>、
+                                <a href="http://peifan325.applinzi.com/Carousel-Modules/fullWindow.html"><span class="public-txt-key">全屏轮播</span></a>、
+                                <a href="http://peifan325.applinzi.com/Carousel-Modules/Css3.html"><span class="public-txt-key">CSS3轮播</span></a>
+
                             </p></li>
                         </ul>
                     </li>
@@ -418,10 +482,13 @@
                     <span class="public-title">个人信息</span>
                     <i class="public-line"></i>
                 </div>
-                <dl>
-                    <dt>sfds</dt>
-                    <dd>dfsdf</dd>
-                </dl>
+                <div class="info-content">
+                    <div class="alert alert-success" role="alert">男</div>
+                    <div class="alert alert-info" role="alert">大专</div>
+                    <div class="alert alert-warning" role="alert">应用电子专业</div>
+                    <div class="alert alert-danger" role="alert">...</div>
+
+                </div>
             </div>
         </div>
 
